@@ -61,6 +61,7 @@
                         Width="220"
                         Height="110"
                         Margin="2"
+                        Click="BscButton_ClickAsync"
                         Content="B.Sc"
                         RelativePanel.Above="EditBtn"
                         Style="{ThemeResource AccentButtonStyle}" />
