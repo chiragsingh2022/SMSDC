@@ -70,6 +70,7 @@
                         Width="220"
                         Height="110"
                         Margin="2"
+                        Click="BaBtn_ClickAsync"
                         Content="BA"
                         RelativePanel.Above="DeleteBtn"
                         Style="{ThemeResource AccentButtonStyle}" />
@@ -78,7 +79,8 @@
                         Width="220"
                         Height="110"
                         Margin="2"
-                        Content="Delete Student"
+                        Click="SettingBtn_ClickAsync"
+                        Content="Setting"
                         RelativePanel.AlignBottomWithPanel="True"
                         Style="{ThemeResource AccentButtonStyle}" />
                     <Button

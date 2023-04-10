@@ -15,9 +15,10 @@ namespace SMSDC.View
             this.InitializeComponent();
         }
 
-        private void BscButton_ClickAsync(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(View.BscPage));
-        }
+        private void BscButton_ClickAsync(object sender, RoutedEventArgs e) => Frame.Navigate(typeof(View.BscPage));
+
+        private void SettingBtn_ClickAsync(object sender, RoutedEventArgs e) => Frame.Navigate(typeof(View.SettingPage));
+
+        private void BaBtn_ClickAsync(object sender, RoutedEventArgs e) => Frame.Navigate(typeof(View.BaPage));
     }
 }
