@@ -2,6 +2,7 @@
 
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -31,6 +32,17 @@ namespace SMSDC
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
+
+            SystemNavigationManager navigationManager = SystemNavigationManager.GetForCurrentView();
+            navigationManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            navigationManager.BackRequested += (s, args) =>
+            {
+                if (Window.Current.Content is Frame roottFrame && roottFrame.CanGoBack)
+                {
+                    rootFrame.GoBack();
+                    args.Handled = true;
+                }
+            };
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active

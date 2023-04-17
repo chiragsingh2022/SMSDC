@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:SMSDC.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="LightGray"
+    Background="{ThemeResource SystemChromeGrayColor}"
     mc:Ignorable="d">
 
     <Grid>
