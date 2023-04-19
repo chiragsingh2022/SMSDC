@@ -15,6 +15,8 @@
 
 namespace SMSDC.Swagger.Smsdc
 {
+    using Newtonsoft.Json;
+
     using System = global::System;
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.15.10.0 (NJsonSchema v10.6.10.0 (Newtonsoft.Json v12.0.0.0))")]
@@ -1078,6 +1080,7 @@ namespace SMSDC.Swagger.Smsdc
         [Newtonsoft.Json.JsonProperty("subject5", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Subject5 { get; set; }
 
+        [JsonIgnore]
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public byte[] Image { get; set; }
 

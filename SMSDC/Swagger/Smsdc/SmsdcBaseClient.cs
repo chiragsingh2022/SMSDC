@@ -12,9 +12,9 @@ namespace SMSDC.Swagger.Smsdc
         {
             var result = new HttpClient
             {
-                BaseAddress = new Uri("https://localhost:7257/")
+                BaseAddress = new Uri("https://localhost:7205/")
             };
-            BaseUrl = "https://localhost:7257/";
+            BaseUrl = "https://localhost:7205/";
             return Task.FromResult(result);
         }
     }

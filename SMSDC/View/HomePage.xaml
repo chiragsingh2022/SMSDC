@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:SMSDC.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="{ThemeResource SystemChromeGrayColor}"
+    Background="{ThemeResource SystemChromeAltHighColor}"
     mc:Ignorable="d">
 
     <Grid>
@@ -26,7 +26,8 @@
                 Grid.ColumnSpan="3"
                 Height="200"
                 Margin="4"
-                VerticalAlignment="Top">
+                VerticalAlignment="Top"
+                Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
