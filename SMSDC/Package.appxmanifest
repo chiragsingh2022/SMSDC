@@ -9,7 +9,7 @@
   <Identity
     Name="a8185e24-93d1-4430-bf9b-45df57a41081"
     Publisher="CN=chsin"
-    Version="1.0.0.0" />
+    Version="1.0.100.0" />
 
   <mp:PhoneIdentity PhoneProductId="a8185e24-93d1-4430-bf9b-45df57a41081" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
