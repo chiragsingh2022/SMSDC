@@ -132,8 +132,8 @@
     <Compile Include="ViewModel\BaPageViewModel.cs" />
     <Compile Include="ViewModel\BscPageViewModel.cs" />
     <Compile Include="ViewModel\HomePageViewModel.cs" />
-    <Compile Include="View\BaPage.xaml.cs">
-      <DependentUpon>BaPage.xaml</DependentUpon>
+    <Compile Include="View\StudentPage.xaml.cs">
+      <DependentUpon>StudentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\BscPage.xaml.cs">
       <DependentUpon>BscPage.xaml</DependentUpon>
@@ -176,7 +176,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\BaPage.xaml">
+    <Page Include="View\StudentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -219,6 +219,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.14</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.8.6</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>

@@ -1,15 +1,25 @@
+using Microsoft.EntityFrameworkCore;
+
+using SmsdcWebApi.Model;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+// Register the DbContext with the connection string from appsettings.json
+builder.Services.AddDbContext<SmsContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))); // This will use the connection string defined in appsettings.json
+
+// Add controllers (API endpoints)
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Configure Swagger (optional, for API docs)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -17,7 +27,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
 app.MapControllers();

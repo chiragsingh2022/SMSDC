@@ -3,10 +3,9 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="using:SMSDC.Dialog"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="CCDialog"
-    Title="Add BA Student"
+    Title="Add Student"
     PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
     PrimaryButtonText="Cancel"
     SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
@@ -70,10 +69,6 @@
             Grid.Column="3"
             Header="Last Name"
             Text="{Binding AddNewBaStudents.LastName, ElementName=CCDialog, Mode=TwoWay}" />
-        <TextBox
-            Grid.Row="1"
-            Grid.Column="0"
-            Header="Image"
-            Text="{Binding AddNewBaStudents.Image, ElementName=CCDialog, Mode=TwoWay}" />
+
     </Grid>
 </ContentDialog>

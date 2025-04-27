@@ -4,17 +4,17 @@ using System.Collections.ObjectModel;
 
 namespace SMSDC.ViewModel
 {
-    public class BaPageViewModel : ViewModelBase
+    public class StudentPageViewModel : ViewModelBase
     {
-        private ObservableCollection<Ba> _baPageData;
-        public ObservableCollection<Ba> BaPageData
+        private ObservableCollection<Student> _StudentPageData;
+        public ObservableCollection<Student> StudentPageData
         {
-            get => _baPageData;
-            set => SetProperty(ref _baPageData, value);
+            get => _StudentPageData;
+            set => SetProperty(ref _StudentPageData, value);
         }
 
-        private Ba _selectedItem;
-        public Ba SelectedItem
+        private Student _selectedItem;
+        public Student SelectedItem
         {
             get => _selectedItem;
             set => SetProperty(ref _selectedItem, value);

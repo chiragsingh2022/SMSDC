@@ -29,6 +29,6 @@ namespace SMSDC.View
 
         private void SettingBtn_ClickAsync(object sender, RoutedEventArgs e) => Frame.Navigate(typeof(View.SettingPage));
 
-        private void BaBtn_ClickAsync(object sender, RoutedEventArgs e) => Frame.Navigate(typeof(View.BaPage));
+        private void BaBtn_ClickAsync(object sender, RoutedEventArgs e) => Frame.Navigate(typeof(View.StudentPage));
     }
 }

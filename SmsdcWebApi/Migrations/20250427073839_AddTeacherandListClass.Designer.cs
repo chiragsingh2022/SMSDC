@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmsdcWebApi.Model;
 
@@ -11,9 +12,11 @@ using SmsdcWebApi.Model;
 namespace SmsdcWebApi.Migrations
 {
     [DbContext(typeof(SmsContext))]
-    partial class SmsdcContextModelSnapshot : ModelSnapshot
+    [Migration("20250427073839_AddTeacherandListClass")]
+    partial class AddTeacherandListClass
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

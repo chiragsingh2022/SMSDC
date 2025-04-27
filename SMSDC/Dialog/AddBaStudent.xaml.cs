@@ -19,8 +19,8 @@ namespace SMSDC.Dialog
             set => SetProperty(ref _isNew, value);
         }
 
-        private Ba _addNewBaStudents;
-        public Ba AddNewBaStudents
+        private Student _addNewBaStudents;
+        public Student AddNewBaStudents
         {
             get => _addNewBaStudents;
             set => SetProperty(ref _addNewBaStudents, value);
@@ -29,7 +29,7 @@ namespace SMSDC.Dialog
         {
             this.InitializeComponent();
             IsNew = isNew;
-            AddNewBaStudents = new Ba();
+            AddNewBaStudents = new Student();
 
         }
 
@@ -39,7 +39,7 @@ namespace SMSDC.Dialog
         {
             if (AddNewBaStudents != null)
             {
-                await new Client().BaPOSTAsync(AddNewBaStudents);
+                await new Client().StudentPOSTAsync(AddNewBaStudents);
             }
         }
 
