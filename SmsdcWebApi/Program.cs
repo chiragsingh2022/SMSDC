@@ -1,14 +1,15 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 using SmsdcWebApi.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// 👇 Add this line to load secrets from User Secrets
+builder.Configuration.AddUserSecrets<Program>();
 
-// Register the DbContext with the connection string from appsettings.json
+// Register the DbContext with the connection string from secrets
 builder.Services.AddDbContext<SmsContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))); // This will use the connection string defined in appsettings.json
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add controllers (API endpoints)
 builder.Services.AddControllers();
@@ -28,7 +29,5 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
